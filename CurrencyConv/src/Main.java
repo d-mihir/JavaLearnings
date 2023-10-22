@@ -14,7 +14,7 @@ public class Main {
     static double PerformConversion(String code1, String code2, double amount) {
         //performs actual conversion
         Gson gson = new Gson();
-        final String accessKey = "7d197080e9dcc2dcfdea8111f4c3dccc";
+        final String accessKey = "access_key";
         final String url = "http://api.currencylayer.com/live?access_key="+accessKey+"&source="+code1+"&currencies="+code2;
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url))
                 .method("GET",HttpRequest.BodyPublishers.noBody()).build();
